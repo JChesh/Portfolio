@@ -1,12 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jonathan Cheshire's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
 </head>
+
 <body>
-    
+
+    <section class="hero is-dark is-fullheight">
+        <!-- Hero head: will stick at the top -->
+        <div class="hero-head">
+            <header class="navbar">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <a class="navbar-item">
+                            <h1 class="title">Portfolio</h1>
+                        </a>
+                        <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </span>
+                    </div>
+                    <div id="navbarMenuHeroC" class="navbar-menu">
+                        <div class="navbar-end">
+                            <a class="navbar-item is-active">
+                                Home
+                            </a>
+                            <a class="navbar-item">
+                                Examples
+                            </a>
+                            <a class="navbar-item">
+                                Documentation
+                            </a>
+                            <span class="navbar-item">
+                                <a class="button is-success is-inverted">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Download</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+        </div>
+
+        <!-- Hero content: will be in the middle -->
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    Hello World!
+                </h1>
+                <h2 class="subtitle">
+                    My name is Jonathan Cheshire
+                </h2>
+            </div>
+        </div>
+
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li class="is-active"><a>Overview</a></li>
+                        <li><a>Modifiers</a></li>
+                        <li><a>Grid</a></li>
+                        <li><a>Elements</a></li>
+                        <li><a>Components</a></li>
+                        <li><a>Layout</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="hero is-fullheight is-white is-bold">
+        <div class="hero-header">
+            <div class="container header has-text-centered">
+                <h5 class="subtitle">About</h5>
+                <h6 class="title">Get to know me.</h6>
+            </div>
+        </div>
+        <div class="hero-body">
+            <div class="tile is-ancestor">
+                <div class="tile is-4 is-vertical is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Profile</p>
+                        <h1>Name : Jonathan Cheshire</h1>
+                        <h1>Name : Jonathan Cheshire</h1>
+                        <h1>Name : Jonathan Cheshire</h1>
+                        <h1>Name : Jonathan Cheshire</h1>
+                    </div>
+                    <div class="tile is-child box">
+                        <p class="title">Tools</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu
+                            pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat
+                            facilisis.</p>
+                    </div>
+                </div>
+                <div class="tile is-parent">
+                    <div class="tile is-child box">
+                        <p class="title">Skills</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar,
+                            at pulvinar felis blandit. Vestibulum volutpat tellus diam, consequat gravida libero rhoncus
+                            ut. Morbi maximus, leo sit amet vehicula eleifend, nunc dui porta orci, quis semper odio
+                            felis ut quam.</p>
+                        <p>Suspendisse varius ligula in molestie lacinia. Maecenas varius eget ligula a sagittis.
+                            Pellentesque interdum, nisl nec interdum maximus, augue diam porttitor lorem, et
+                            sollicitudin felis neque sit amet erat. Maecenas imperdiet felis nisi, fringilla luctus
+                            felis hendrerit sit amet. Aenean vitae gravida diam, finibus dignissim turpis. Sed eget
+                            varius ligula, at volutpat tortor.</p>
+                        <p>Integer sollicitudin, tortor a mattis commodo, velit urna rhoncus erat, vitae congue lectus
+                            dolor consequat libero. Donec leo ligula, maximus et pellentesque sed, gravida a metus. Cras
+                            ullamcorper a nunc ac porta. Aliquam ut aliquet lacus, quis faucibus libero. Quisque non
+                            semper leo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight is-dark">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title">
+                    MY RECENT WORK
+                </h1>
+                <h2 class="subtitle">
+                    Here are some of my current & upcoming projects.
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section class="hero is-fullheight is-light">
+        <div class="container has-text-centered hero-head">
+            <h1 class="title">
+                Contact
+            </h1>
+            <h2 class="subtitle">
+                Form
+            </h2>
+            <div class="hero-body">
+                <div class="columns">
+                    <div class="column">
+                        <input class="input" type="text" placeholder="Name">
+                    </div>
+                    <div class="column">
+                        <input class="input" type="text" placeholder="Email">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <div class="control">
+                            <textarea class="textarea is-medium" placeholder="Medium textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <footer class="footer footer-background-color is-dark">
+        <div class="content has-text-centered">
+            <p>
+                <strong>Portfolio</strong> by <a href="https://jgthms.com">Jon Cheshire</a>
+            </p>
+        </div>
+    </footer>
+
 </body>
+
 </html>
