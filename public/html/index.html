@@ -8,7 +8,8 @@
     <title>Jonathan Cheshire's Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
@@ -16,11 +17,12 @@
     <section class="hero is-dark is-fullheight">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
+            <a name="mainTarget"></a>
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item">
-                            <h1 class="title">Portfolio</h1>
+                            <h1 class="title">myPortfolio</h1>
                         </a>
                         <span class="navbar-burger burger" data-target="navbarMenuHeroC">
                             <span></span>
@@ -28,23 +30,27 @@
                             <span></span>
                         </span>
                     </div>
-                    <div id="navbarMenuHeroC" class="navbar-menu">
+                    <div class="navbar-menu">
                         <div class="navbar-end">
-                            <a class="navbar-item is-active">
-                                Home
-                            </a>
-                            <a class="navbar-item">
-                                Examples
-                            </a>
-                            <a class="navbar-item">
-                                Documentation
-                            </a>
                             <span class="navbar-item">
-                                <a class="button is-success is-inverted">
+                                <a class="button is-success is-inverted is-medium" href="#">
                                     <span class="icon">
                                         <i class="fab fa-github"></i>
                                     </span>
-                                    <span>Download</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-success is-inverted is-medium" href="#">
+                                    <span class="icon">
+                                        <i class="fab fa-linkedin-in"></i>
+                                    </span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-success is-inverted is-medium" href="#">
+                                    <span class="icon">
+                                        <i class="far fa-envelope"></i>
+                                    </span>
                                 </a>
                             </span>
                         </div>
@@ -70,18 +76,17 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li class="is-active"><a>Overview</a></li>
-                        <li><a>Modifiers</a></li>
-                        <li><a>Grid</a></li>
-                        <li><a>Elements</a></li>
-                        <li><a>Components</a></li>
-                        <li><a>Layout</a></li>
+                        <li class="is-active overview"><a href="#mainTarget">Overview</a></li>
+                        <li class="is-active about"><a href="#aboutTarget">About</a></li>
+                        <li class="is-active work"><a href="#workTarget">Work</a></li>
+                        <li class="is-active contact"><a href="#contactTarget">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
     <section class="hero is-fullheight is-white is-bold">
+        <a name="aboutTarget"></a>
         <div class="hero-header">
             <div class="container header has-text-centered">
                 <h5 class="subtitle">About</h5>
@@ -125,8 +130,21 @@
                 </div>
             </div>
         </div>
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li class="is-active overview"><a href="#mainTarget">Overview</a></li>
+                        <li class="is-active about"><a href="#aboutTarget">About</a></li>
+                        <li class="is-active work"><a href="#workTarget">Work</a></li>
+                        <li class="is-active contact"><a href="#contactTarget">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </section>
     <section class="hero is-fullheight is-dark">
+        <a name="workTarget"></a>
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title">
@@ -137,41 +155,108 @@
                 </h2>
             </div>
         </div>
-    </section>
-    <section class="hero is-fullheight is-light">
-        <div class="container has-text-centered hero-head">
-            <h1 class="title">
-                Contact
-            </h1>
-            <h2 class="subtitle">
-                Form
-            </h2>
-            <div class="hero-body">
-                <div class="columns">
-                    <div class="column">
-                        <input class="input" type="text" placeholder="Name">
-                    </div>
-                    <div class="column">
-                        <input class="input" type="text" placeholder="Email">
-                    </div>
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li class="is-active overview"><a href="#mainTarget">Overview</a></li>
+                        <li class="is-active about"><a href="#aboutTarget">About</a></li>
+                        <li class="is-active work"><a href="#workTarget">Work</a></li>
+                        <li class="is-active contact"><a href="#contactTarget">Contact</a></li>
+                    </ul>
                 </div>
-                <div class="column">
-                    <div class="field">
-                        <div class="control">
-                            <textarea class="textarea is-medium" placeholder="Medium textarea"></textarea>
+            </nav>
+        </div>
+    </section>
+    <section class="section hero is-light contact1">
+        <div class="container">
+            <div class="header-intro">
+                <h5 class="has-text-centered is-uppercase">Contact</h5>
+                <h6 class="has-text-centered has-text-white">Do you have an idea or simply want to chat?</h6>
+                <h6 class="has-text-centered has-text-white">I'd love to hear from you.</h6>
+            </div>
+            <form id="form" name="contact" method="POST" data-netlify-recaptcha="true"><input type="hidden"
+                    name="form-name" value="contact">
+                <div class="columns is-centered">
+                    <p class="hidden is-hidden">
+                        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                    </p>
+                    <div class="column is-half">
+                        <div class="field">
+                            <label class="label">Name</label>
+                            <div class="control is-expanded">
+                                <input class="input is-medium" name="name" id="name" type="text" required="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column is-half">
+                        <div class="field">
+                            <label class="label">Email</label>
+                            <div class="control is-expanded">
+                                <input class="input is-medium" type="email" id="email" name="email" required="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="columns is-centered">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label">Message</label>
+                            <div class="control is-expanded">
+                                <textarea class="textarea is-medium" name="comment" id="comment" rows="5"
+                                    required=""></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="columns is-centered">
+                    <div class="column center">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-medium is-rounded" type="submit">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </section>
-    <footer class="footer footer-background-color is-dark">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Portfolio</strong> by <a href="https://jgthms.com">Jon Cheshire</a>
-            </p>
+    <footer class="section hero is-dark has-text-centered" role="contentInfo" itemscope="itemscope">
+        <div class="container is-narrow">
+            <div class="social">
+                <p class="field">
+                    <a class="button is-medium is-rounded" href="#" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </p>
+                <p class="field">
+                    <a class="button is-medium is-rounded" href="#" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </p>
+                <p class="field">
+                    <a class="button is-medium is-rounded" href="mailto:jonathans.cheshire@gmail.com">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </p>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright © Jonathan Cheshire <span id="year">2019</span></p>
+            </div>
+
+            <a href="https://bulma.io"><img src="https://bulma.io/images/made-with-bulma--white.png"
+                    alt="Made with Bulma" width="163" height="31"></a>
+
+            <div id="scroll-top" style="display: block;">
+                <a class="scroll" title="Scroll Back To Top" href="#top">
+                </a>
+            </div>
         </div>
     </footer>
 
+    <!-- Javascript -->
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
