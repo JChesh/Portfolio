@@ -3,3 +3,12 @@
 	justify-content: center;
 	align-items: center;
 }
+.helloWorld {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://hdqwalls.com/download/stars-space-landscape-mountains-ki-1920x1080.jpg");
+}
+.navFont{
+	font-family: 'Courgette', cursive;
+}
