@@ -12,3 +12,11 @@
 .navFont{
 	font-family: 'Courgette', cursive;
 }
+.social {
+    display: flex!important;
+    justify-content: center!important;
+	margin: 2rem 2rem 2rem 2rem;
+}
+.endButtons{
+	padding: 0 2rem;
+}
