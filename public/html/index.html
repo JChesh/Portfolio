@@ -392,19 +392,16 @@
         <a name="contactTarget"></a>
         <div class="container">
             <div class="header-intro">
-                <h5 class="has-text-centered is-uppercase">Contact</h5>
-                <h6 class="has-text-centered">Do you have an idea or simply want to chat?</h6>
-                <h6 class="has-text-centered">I'd love to hear from you.</h6>
+                <h5 class="has-text-centered is-uppercase has-text-danger">Contact</h5>
+                <h6 class="has-text-centered has-text-white">Do you have an idea or simply want to chat?</h6>
+                <h6 class="has-text-centered has-text-white">I'd love to hear from you.</h6>
             </div>
             <form id="form" name="contact" method="POST" data-netlify-recaptcha="true"><input type="hidden"
                     name="form-name" value="contact">
                 <div class="columns is-centered">
-                    <p class="hidden is-hidden">
-                        <label>Don’t fill this out if you're human: <input name="bot-field"></label>
-                    </p>
                     <div class="column is-half">
                         <div class="field">
-                            <label class="label">Name</label>
+                            <label class="label has-text-danger">Name</label>
                             <div class="control is-expanded">
                                 <input class="input is-medium" name="name" id="name" type="text" required="">
                             </div>
@@ -412,7 +409,7 @@
                     </div>
                     <div class="column is-half">
                         <div class="field">
-                            <label class="label">Email</label>
+                            <label class="label has-text-danger">Email</label>
                             <div class="control is-expanded">
                                 <input class="input is-medium" type="email" id="email" name="email" required="">
                             </div>
@@ -422,7 +419,7 @@
                 <div class="columns is-centered">
                     <div class="column">
                         <div class="field">
-                            <label class="label">Message</label>
+                            <label class="label has-text-danger">Message</label>
                             <div class="control is-expanded">
                                 <textarea class="textarea is-medium" name="comment" id="comment" rows="5"
                                     required=""></textarea>
@@ -464,15 +461,11 @@
                     </a>
                 </p>
             </div>
-            <div class="copyright">
+            <div class="copyright has-text-danger">
                 <p>Copyright © Jonathan Cheshire <span id="year">2019</span></p>
             </div>
             <a href="https://bulma.io"><img src="https://bulma.io/images/made-with-bulma--white.png"
                     alt="Made with Bulma" width="163" height="31"></a>
-            <div id="scroll-top" style="display: block;">
-                <a class="scroll" title="Scroll Back To Top" href="#top">
-                </a>
-            </div>
         </div>
     </footer>
     <!-- End Section -->
